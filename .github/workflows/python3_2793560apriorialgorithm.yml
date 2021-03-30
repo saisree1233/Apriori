@@ -19,17 +19,17 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.8'
+        python-version: '3.6'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v2
       with:
         platform: python
-        platform-version: '3.8'
+        platform-version: '3.6'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: '2793560apriorialgorithm'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4cc3245e2c3d4d709c7f182f2c751396 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b30c2d2093b144449b05b8237e9fadbe }}
